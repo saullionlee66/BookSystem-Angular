@@ -1,0 +1,45 @@
+<header>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Book System App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarsExample01">
+        <ul class="navbar-nav mr-auto">
+    
+        </ul>
+    
+      </div>
+    </nav>
+  </header>
+
+  <main class="chat">
+    <div class="container">
+
+      <form  #sendForm='ngForm' (ngSubmit)="onSubmit(sendForm.value); sendForm.resetForm()">
+          <div class="id-input row">
+            <div class="col-2">
+                <label ><strong>Book ID</strong></label>
+                <input placeholder="Enter the book ID"
+                type="text" ngModel class="form-control" name="id" id="input-id" required>
+            </div>
+            <div class="col-4">
+                <label> <strong>Book Name</strong></label>
+                <input placeholder="Enter the book name"
+                type="text" ngModel class="form-control" name="name" id="input-name" required>
+            </div>
+            <div class="col-4">
+                <label > <strong> Price</strong></label>
+                <input placeholder="Enter the book price"
+                type="text" ngModel class="form-control" name="price" id="input-price" required>
+            </div>
+          </div>
+          <div class="col-3 mt-3">
+            <button tyep="submit" class="btn btn-primary">Send</button>
+        </div>
+      </form>
+      <br>
+    </div>
+  </main>
+  <app-books-display></app-books-display>
